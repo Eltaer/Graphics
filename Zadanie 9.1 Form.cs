@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,12 +25,13 @@ namespace WindowsFormsApplication4
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            int[] n = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int n = Convert.ToInt32(textBox2.Text);
+            double[] arr = new double[n];
 
             string FileName = @"C:\Users\stu-pkspk219\Desktop\file.txt";
             using (StreamWriter sw = new StreamWriter(FileName))
             {
-                foreach (int i in n)
+                for (int i = 0; i<n; i++)
                 {
                     if (i % 2 == 0)
                     {
